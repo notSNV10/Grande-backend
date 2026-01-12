@@ -22,10 +22,10 @@ except ImportError:
 
 class Settings:
     # Database
-    db_host: str = os.getenv("DB_HOST", "localhost")
-    db_user: str = os.getenv("DB_USER", "root")
-    db_password: str = os.getenv("DB_PASSWORD", "")
-    db_name: str = os.getenv("DB_NAME", "adarna_db")
+    db_host: str = os.getenv("DB_HOST", "srv2093.hstgr.io")
+    db_user: str = os.getenv("DB_USER", "u446276639_adarna_user")
+    db_password: str = os.getenv("DB_PASSWORD", "f!7WBjM4b")
+    db_name: str = os.getenv("DB_NAME", "u446276639_adarna_db")
     db_port: int = int(os.getenv("DB_PORT", "3306"))
 
     # AI keys (placeholders; use env vars in local .env or host secrets)
