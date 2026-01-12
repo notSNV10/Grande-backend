@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: adarna-grande-backend
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: cd python && uvicorn api:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: DB_HOST
+        sync: false
+      - key: DB_USER
+        sync: false
+      - key: DB_PASSWORD
+        sync: false
+      - key: DB_NAME
+        sync: false
+      - key: DB_PORT
+        value: 3306
+      - key: OPENROUTER_API_KEY
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: MISTRAL_API_KEY
+        sync: false
+      - key: FRONTEND_URL
+        sync: false
